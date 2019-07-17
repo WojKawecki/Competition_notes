@@ -1,6 +1,7 @@
 #! python3
 ##This program will calculate all scores for each player
 import pprint
+from tkinter import *
 
 print('---------------------------------------------------------')
 print("Tura I")
@@ -84,6 +85,11 @@ for i in range((len(players))):
         continue
     k.append(p)
 pprint.pprint(wszyscy_zawodnicy)
+
+root = Tk()
+the_label = Label(root, text=str(zawodnicy_series))
+the_label.pack()
+
 print('---------------------------------------------------------')
 ## następuje zliczenie punktów wszystkich zawodników
 
@@ -96,5 +102,7 @@ for i in range(len(players)):
 
 print('---------------------------------------------------------')
 
-input("press enter to finish...")
+
+input("Close the window to finish...")
+root.mainloop()
 
